@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Manipulation with Forms</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <form method="POST" id="form">
+                    <div class="form-group mt-3">
+                        <label for="fname">First Name</label><br/>
+                        <input type="text" class="form-group" id="fname" placeholder="Enter your first name" required/>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="lname">Last Name</label><br/>
+                        <input type="text" class="form-group" id="lname" placeholder="Enter your last name" required/>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="address">Address</label><br/>
+                        <textarea type="text" class="form-group" id="address" placeholder="Enter your address"></textarea>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="pincode">Pincode</label><br/>
+                        <input type="text" class="form-group" id="pincode" placeholder="pincode" maxlength="6" required/>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="state">State</label><br/>
+                        <input type="text" class="form-group" id="state" placeholder="state" required/>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="country">Country</label><br/>
+                        <input type="text" class="form-group" id="country" placeholder="country" required/>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="gender">Gender</label><br/>
+                        <select class="form-control" name="gender" id="gender" required>
+                          <option></option>
+                          <option value="male">Male</option>
+                          <option value="female">Female</option>
+                          <option value="other">Other</option>
+                        </select>
+                    </div>
+                    <div class="form-group mt-3">
+                        <label for="food"><b>Must choose at least 2 out of 5 options</b></label><br/>
+                        <input type="checkbox" class="food" id="briyani" value="briyani"/>
+                        <label for="briyani">Briyani</label>
+                        <input type="checkbox" class="food" id="noodles" value="noodles"/>
+                        <label for="noodles">Noodles</label>
+                        <input type="checkbox" class="food" id="friedrice" value="friedrice"/>
+                        <label for="friedrice">Friedrice</label>
+                        <input type="checkbox" class="food" id="dosa" value="dosa"/>
+                        <label for="dosa">Dosa</label>
+                        <input type="checkbox" class="food" id="idly" value="idly"/>
+                        <label for="idly">Idly</label>
+                    </div>
+                    <button id="submit" type="submit" class="btn btn-primary mt-3">Submit</button>
+                </form>
+            </div>
+            <div class="col-lg-8 col-md-6 mt-3" id="main">
+                <table class="table table-primary" id="table">
+                  <thead>
+                    <tr class="table-primary">
+                      <th>First Name</th>
+                      <th>Last Name</th>
+                      <th>Address</th>
+                      <th>Pincode</th>
+                      <th>Gender</th>
+                      <th>State</th>
+                      <th>Country</th>
+                      <th>Choice of Food</th>
+                    </tr>
+                  </thead>
+                  <tbody id="tbody"></tbody>
+                </table>
+              </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</body>
+</html>
